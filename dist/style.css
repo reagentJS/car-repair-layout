@@ -269,3 +269,17 @@ body {
 }
 
 /* ----------------- ./team ------------------- */
+/* ------------------- video ------------------- */
+.section__video {
+  min-height: 500px;
+  background: url(../assets/3-video/back.png) no-repeat;
+}
+.section__video div {
+  transform: translate(50%, 50%);
+}
+.section__video h3 {
+  width: 411px;
+  color: #fff;
+}
+
+/* ----------------- ./video ------------------- */

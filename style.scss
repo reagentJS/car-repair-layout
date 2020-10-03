@@ -296,3 +296,20 @@ body {
     }
 }
 /* ----------------- ./team ------------------- */
+
+
+/* ------------------- video ------------------- */
+.section__video {
+    min-height: 500px;
+    background: url(../assets/3-video/back.png) no-repeat;
+
+    div {
+        transform: translate(50%, 50%);
+    }
+
+    h3 {
+        width: 411px;
+        color: #fff;
+    }
+}
+/* ----------------- ./video ------------------- */
