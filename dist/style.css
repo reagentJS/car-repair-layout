@@ -4,12 +4,18 @@
   box-sizing: border-box;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 body {
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
 }
 
 .section {
+  width: 1440px;
   margin: 0 auto;
 }
 
@@ -24,7 +30,6 @@ body {
   padding-top: 28px;
   min-height: 800px;
   background: url(../assets/1-intro/back.png) no-repeat;
-  background-position: center;
 }
 
 .header {
@@ -64,8 +69,9 @@ body {
 
 .button {
   display: flex;
+  font-size: 12px;
   text-transform: uppercase;
-  cursor: pointer;
+  color: #fff;
 }
 .button .button_left,
 .button .button_right {
@@ -95,9 +101,69 @@ body {
   z-index: 100;
 }
 
-.header__down {
+.nav {
   min-height: 60px;
+  margin-bottom: 126px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
+
+.nav__navbar {
+  width: 556px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__navbar > a {
+  font-size: 14px;
+  font-weight: 700;
   color: #02133C;
+}
+.nav__navbar > a img {
+  transform: translateY(-25%);
+}
+
+.nav__icons {
+  display: flex;
+}
+
+.icons__search {
+  margin-right: 22px;
+}
+
+.icons__basket {
+  position: relative;
+}
+.icons__basket .icons__basket_num {
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+  top: 0;
+  transform: translate(50%, -30%);
+  width: 16px;
+  height: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 10px;
+  color: #fff;
+  background-color: #C40B0B;
+}
+
+.title {
+  width: 583px;
+  margin-bottom: 48px;
+  display: flex;
+}
+.title h1 {
+  font-size: 56px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 56px;
 }
 
 /* ----------------- ./intro ------------------- */
