@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// h1, h2, h3, h4, h5, h6 {
+
+// }
+
+$neu_grey1_col: #4B4B4B;
+$neu_grey2_col: #959595;
+$sec_col: #02133C;
+
+$btn_dark_col: #C40B0B;
+$btn_light_col: #E30B0B;
+
+body {
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+.section {
+    margin: 0 auto;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* ------------------- intro ------------------- */
+.section__intro {
+    padding-top: 28px;
+    min-height: 800px;
+    background: url(../assets/1-intro/back.png) no-repeat;
+    background-position: center;
+}
+
+.header {
+    min-height: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    color: #fff;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+
+    img {
+        margin-right: 11px;
+    }
+}
+
+.header__contacts {
+    width: 610px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.contacts__hours,
+.contacts__phone {
+    display: flex;
+}
+
+.container__icon {
+    margin-right: 10px;
+    height: 100%;
+}
+
+.button {
+    display: flex;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    .button_left,
+    .button_right {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button_left {
+        width: 168px;
+        background-color: $btn_dark_col;
+    }
+
+    .button_right {
+        position: relative;
+        width: 43px;
+        background-color: $btn_light_col;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: -14px;
+            width: 20px;
+            height: 100%;
+            transform-origin: bottom left;
+            transform: skewX(-20deg);
+            background-color: $btn_light_col;
+            z-index: 100;
+        }
+    }
+}
+
+.header__down {
+    min-height: 60px;
+    color: $sec_col;
+}
+/* ----------------- ./intro ------------------- */
