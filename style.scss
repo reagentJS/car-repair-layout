@@ -6,9 +6,10 @@
 
 $neu_grey1: #4B4B4B;
 $neu_grey2: #959595;
+$neu_grey3: #D5D5D5;
 $secondary: #02133C;
-$btn_dark: #C40B0B;
-$btn_light: #E30B0B;
+$red_dark: #C40B0B;
+$red_light: #E30B0B;
 $section: #F5F5F5;
 
 a {
@@ -16,25 +17,30 @@ a {
     text-decoration: inherit;
 }
 
-h3 {
-    font-size: 36px;
-    line-height: 42px;
+h1, h2, h3, h4, h5, h6 {
     font-weight: 900;
     color: $secondary;
 }
 
+h3 {
+    font-size: 36px;
+    line-height: 42px;
+}
+
 h4 {
     font-size: 30px;
-    font-weight: 900;
     line-height: 36px;
+}
+
+h5 {
+    font-size: 24px;
+    line-height: 30px;
 }
 
 h6 {
     margin-bottom: 20px;
     font-size: 19px;
     line-height: 26px;
-    font-weight: 900;
-    color: $secondary;
 }
 
 body {
@@ -113,13 +119,13 @@ body {
 
     .button_left {
         padding: 0 24px 0 20px;
-        background-color: $btn_dark;
+        background-color: $red_dark;
     }
 
     .button_right {
         position: relative;
         width: 36px;
-        background-color: $btn_light;
+        background-color: $red_light;
 
         &:before {
             content: '';
@@ -129,7 +135,7 @@ body {
             height: 100%;
             transform-origin: bottom left;
             transform: skewX(-20deg);
-            background-color: $btn_light;
+            background-color: $red_light;
             z-index: 100;
         }
     }
@@ -190,7 +196,7 @@ body {
 
         font-size: 10px;
         color: #fff;
-        background-color: $btn_dark;
+        background-color: $red_dark;
     }
 }
 
@@ -201,7 +207,6 @@ body {
 
     h1 {
         font-size: 56px;
-        font-weight: 900;
         color: #fff;
         line-height: 56px;
     }
@@ -487,7 +492,7 @@ body {
         line-height: 56px;
         font-weight: 900;
 
-        color: $btn_dark;
+        color: $red_dark;
     }
 
     h6 {
@@ -546,13 +551,13 @@ body {
     }
 
     &:hover {
-        border-bottom: 4px solid $btn_dark;
+        border-bottom: 4px solid $red_dark;
     }
 }
 
 .gallery__item__active {
-    border-bottom: 4px solid $btn_dark;
-    color: $btn_dark;
+    border-bottom: 4px solid $red_dark;
+    color: $red_dark;
 }
 
 .blink {
@@ -643,3 +648,79 @@ body {
     }
 }
 /* ----------------- ./gallery ------------------- */
+
+
+/* ------------------- impact ------------------- */
+.section__impact {
+    min-height: 580px;
+    overflow: visible;
+    background: url(../assets/7-impact/back.png);
+    background-repeat: no-repeat;
+    background-color: $secondary;
+
+    .suptitle {
+        color: $neu_grey3;
+    }
+}
+
+.impact__inner {
+    transform: translateY(-25%);
+    margin-bottom: 85px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    h3 {
+        width: 411px;
+        color: #fff;
+    }
+}
+
+.repairs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.repairs__item {
+    width: 23.23%;
+    display: flex;
+
+    img {
+        margin-right: 11px;
+    }
+
+    .block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h3 {
+        color: $red_dark;
+    }
+
+    p {
+        color: $section;
+    }
+}
+
+.onBorder {
+    transform: translateY(50%);
+
+    padding: 0 70px;
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #fff;
+
+    h5 {
+        margin-right: 20px;
+        max-width: 562px;
+    }
+}
+/* ----------------- ./impact ------------------- */
