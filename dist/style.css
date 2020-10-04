@@ -66,12 +66,15 @@ body {
   align-items: start;
   color: #fff;
 }
+.header h2 {
+  color: #fff;
+}
 
-.header__logo {
+.logo {
   display: flex;
   align-items: center;
 }
-.header__logo img {
+.logo img {
   margin-right: 11px;
 }
 
@@ -641,3 +644,129 @@ body {
 }
 
 /* ----------------- ./impact ------------------- */
+/* ------------------- footer ------------------- */
+.footer {
+  height: 530px;
+  background-color: #F5F5F5;
+}
+
+.container__footer {
+  padding-top: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  max-width: 235px;
+  display: flex;
+  flex-direction: column;
+}
+.info .logo {
+  margin-bottom: 23px;
+}
+.info span {
+  margin-bottom: 33px;
+}
+
+.social {
+  width: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social__icons {
+  fill: #C40B0B;
+  transition: 0.4s;
+}
+.social__icons.facebook {
+  width: 10px;
+  height: 20px;
+}
+.social__icons.twitter {
+  width: 22px;
+  height: 17px;
+}
+.social__icons.instagram {
+  width: 18px;
+  height: 18px;
+}
+.social__icons.youtube {
+  width: 20px;
+  height: 14px;
+}
+.social__icons:hover {
+  fill: #02133C;
+}
+
+.links,
+.contact {
+  max-width: 280px;
+  color: #4B4B4B;
+}
+.links p,
+.contact p {
+  margin-bottom: 28px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.links__bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.links__item {
+  width: calc((100% - 11px) / 2);
+}
+
+.contact__bar {
+  display: flex;
+  flex-direction: column;
+}
+.contact__bar a {
+  margin-bottom: 18px;
+}
+.contact__bar svg {
+  margin-right: 18px;
+}
+
+.contact__item {
+  display: flex;
+  align-items: center;
+}
+.contact__item:hover .contact__text {
+  text-decoration: underline;
+}
+.contact__item:hover .contact__icons {
+  fill: #02133C;
+}
+
+.contact__item__clock {
+  display: flex;
+  align-items: center;
+}
+
+.contact__icons {
+  width: 16px;
+  height: 16px;
+  fill: #C40B0B;
+}
+
+.container__footer_down {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #959595;
+}
+.container__footer_down a {
+  font-weight: 700;
+}
+
+.policy {
+  height: 60px;
+  background-color: #02133C;
+}
+
+/* ----------------- ./footer ------------------- */

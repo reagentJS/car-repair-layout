@@ -6,20 +6,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="dist/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
     <title>Car repair</title>
 
 </head>
 
 <body>
 
+<!-- Sprites -->
+<svg style="display: none">
+
+    <svg id="facebook" width="10" height="20" viewBox="0 0 10 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 0V4H8C7.31 4 7 4.81 7 5.5V8H10V12H7V20H3V12H0V8H3V4C3 2.93913 3.42143 1.92172 4.17157 1.17157C4.92172 0.421427 5.93913 0 7 0H10Z"/>
+    </svg>
+
+    <svg id="twitter" width="22" height="17" viewBox="0 0 22 17" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21.46 2C20.69 2.35 19.86 2.58 19 2.69C19.88 2.16 20.56 1.32 20.88 0.31C20.05 0.81 19.13 1.16 18.16 1.36C17.37 0.5 16.26 0 15 0C12.65 0 10.73 1.92 10.73 4.29C10.73 4.63 10.77 4.96 10.84 5.27C7.28004 5.09 4.11004 3.38 2.00004 0.79C1.63004 1.42 1.42004 2.16 1.42004 2.94C1.42004 4.43 2.17004 5.75 3.33004 6.5C2.62004 6.5 1.96004 6.3 1.38004 6C1.38004 6 1.38004 6 1.38004 6.03C1.38004 8.11 2.86004 9.85 4.82004 10.24C4.46004 10.34 4.08004 10.39 3.69004 10.39C3.42004 10.39 3.15004 10.36 2.89004 10.31C3.43004 12 5.00004 13.26 6.89004 13.29C5.43004 14.45 3.58004 15.13 1.56004 15.13C1.22004 15.13 0.880039 15.11 0.540039 15.07C2.44004 16.29 4.70004 17 7.12004 17C15 17 19.33 10.46 19.33 4.79C19.33 4.6 19.33 4.42 19.32 4.23C20.16 3.63 20.88 2.87 21.46 2Z"/>
+    </svg>
+
+    <svg id="instagram" width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.0325 0H4.96724C2.22831 0 0 2.22841 0 4.96735V13.0327C0 15.7717 2.22831 18 4.96724 18H13.0325C15.7717 18 18 15.7716 18 13.0327V4.96735C18.0001 2.22841 15.7717 0 13.0325 0ZM16.4031 13.0327C16.4031 14.8911 14.8911 16.403 13.0327 16.403H4.96724C3.10892 16.4031 1.59705 14.8911 1.59705 13.0327V4.96735C1.59705 3.10903 3.10892 1.59705 4.96724 1.59705H13.0325C14.891 1.59705 16.403 3.10903 16.403 4.96735L16.4031 13.0327Z"/>
+        <path d="M8.99996 4.36206C6.44245 4.36206 4.36182 6.44269 4.36182 9.00021C4.36182 11.5576 6.44245 13.6381 8.99996 13.6381C11.5575 13.6381 13.6381 11.5576 13.6381 9.00021C13.6381 6.44269 11.5575 4.36206 8.99996 4.36206ZM8.99996 12.041C7.32317 12.041 5.95886 10.6769 5.95886 9.0001C5.95886 7.3232 7.32306 5.959 8.99996 5.959C10.6769 5.959 12.0411 7.3232 12.0411 9.0001C12.0411 10.6769 10.6768 12.041 8.99996 12.041Z"/>
+        <path d="M13.8327 3.00781C13.525 3.00781 13.2227 3.13238 13.0054 3.35065C12.787 3.56784 12.6615 3.87022 12.6615 4.17898C12.6615 4.48678 12.7871 4.78905 13.0054 5.00732C13.2226 5.22451 13.525 5.35015 13.8327 5.35015C14.1414 5.35015 14.4427 5.22451 14.661 5.00732C14.8793 4.78905 15.0038 4.48668 15.0038 4.17898C15.0038 3.87022 14.8793 3.56784 14.661 3.35065C14.4438 3.13238 14.1414 3.00781 13.8327 3.00781Z"/>
+    </svg>
+
+    <svg id="youtube" width="20" height="14" viewBox="0 0 20 14" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8 10L13.19 7L8 4V10ZM19.56 2.17C19.69 2.64 19.78 3.27 19.84 4.07C19.91 4.87 19.94 5.56 19.94 6.16L20 7C20 9.19 19.84 10.8 19.56 11.83C19.31 12.73 18.73 13.31 17.83 13.56C17.36 13.69 16.5 13.78 15.18 13.84C13.88 13.91 12.69 13.94 11.59 13.94L10 14C5.81 14 3.2 13.84 2.17 13.56C1.27 13.31 0.69 12.73 0.44 11.83C0.31 11.36 0.22 10.73 0.16 9.93C0.0900001 9.13 0.0599999 8.44 0.0599999 7.84L0 7C0 4.81 0.16 3.2 0.44 2.17C0.69 1.27 1.27 0.69 2.17 0.44C2.64 0.31 3.5 0.22 4.82 0.16C6.12 0.0899998 7.31 0.0599999 8.41 0.0599999L10 0C14.19 0 16.8 0.16 17.83 0.44C18.73 0.69 19.31 1.27 19.56 2.17Z"/>
+    </svg>
+
+    <svg id="address" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99992 1.3335C5.41992 1.3335 3.33325 3.42016 3.33325 6.00016C3.33325 9.50016 7.99992 14.6668 7.99992 14.6668C7.99992 14.6668 12.6666 9.50016 12.6666 6.00016C12.6666 3.42016 10.5799 1.3335 7.99992 1.3335ZM4.66659 6.00016C4.66659 4.16016 6.15992 2.66683 7.99992 2.66683C9.83992 2.66683 11.3333 4.16016 11.3333 6.00016C11.3333 7.92016 9.41325 10.7935 7.99992 12.5868C6.61325 10.8068 4.66659 7.90016 4.66659 6.00016ZM6.33325 6.00016C6.33325 5.07969 7.07944 4.3335 7.99992 4.3335C8.59536 4.3335 9.14557 4.65116 9.44329 5.16683C9.74102 5.6825 9.74102 6.31783 9.44329 6.8335C9.14557 7.34916 8.59536 7.66683 7.99992 7.66683C7.07944 7.66683 6.33325 6.92064 6.33325 6.00016Z"/>
+    </svg>
+
+    <svg id="phone" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66659 0.666504L11.3333 0.673171C12.0666 0.673171 12.6666 1.2665 12.6666 1.99984V13.9998C12.6666 14.7332 12.0666 15.3332 11.3333 15.3332H4.66659C3.93325 15.3332 3.33325 14.7332 3.33325 13.9998V1.99984C3.33325 1.2665 3.93325 0.666504 4.66659 0.666504ZM4.66659 12.6665H11.3333V3.33317H4.66659V12.6665Z"/>
+    </svg>
+
+    <svg id="mail" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6666 3.99984C14.6666 3.2665 14.0666 2.6665 13.3333 2.6665H2.66659C1.93325 2.6665 1.33325 3.2665 1.33325 3.99984V11.9998C1.33325 12.7332 1.93325 13.3332 2.66659 13.3332H13.3333C14.0666 13.3332 14.6666 12.7332 14.6666 11.9998V3.99984ZM13.3333 3.99984L7.99992 7.33317L2.66659 3.99984H13.3333ZM7.99992 8.6665L2.66659 5.33317V11.9998H13.3333V5.33317L7.99992 8.6665Z"/>
+    </svg>
+
+    <svg id="clock" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.66774 1H9.33441C9.70108 1 10.0011 1.3 10.0011 1.66667C10.0011 2.03333 9.70108 2.33333 9.33441 2.33333H6.66774C6.30108 2.33333 6.00108 2.03333 6.00108 1.66667C6.00108 1.3 6.30108 1 6.66774 1ZM8.66774 9C8.66774 9.36667 8.36774 9.66667 8.00108 9.66667C7.63441 9.66667 7.33441 9.36667 7.33441 9V6.33333C7.33441 5.96667 7.63441 5.66667 8.00108 5.66667C8.36774 5.66667 8.66774 5.96667 8.66774 6.33333V9ZM12.6877 5.26L13.1877 4.76C13.441 4.50667 13.4477 4.08667 13.1877 3.82667L13.181 3.82C12.921 3.56 12.5077 3.56667 12.2477 3.82L11.7477 4.32C10.7144 3.49333 9.41438 3 8.00104 3C4.80104 3 2.08104 5.64 2.00104 8.84C1.91438 12.2267 4.62771 15 8.00104 15C11.321 15 14.001 12.3133 14.001 9C14.001 7.58667 13.5077 6.28667 12.6877 5.26ZM3.33441 9C3.33441 11.58 5.42108 13.6667 8.00108 13.6667C10.5811 13.6667 12.6677 11.58 12.6677 9C12.6677 6.42 10.5811 4.33333 8.00108 4.33333C5.42108 4.33333 3.33441 6.42 3.33441 9Z"/>
+    </svg>
+
+</svg>
+<!-- // Sprites -->
+
     <section class="section section__intro">
         <div class="container">
 
             <div class="header">
 
-                <div class="header__logo">
+                <div class="logo">
                     <img src="assets/1-intro/logo.svg" alt="logo.svg" width="40" height="40">
                     <h2>logoipsum</h2>
                 </div>
@@ -42,7 +81,7 @@
                         <span>
                             CALL US
                             <br>
-                            (555) Car-Repair
+                            (555) 765-4321
                         </span>
                     </div>
 
@@ -166,7 +205,7 @@
                 <img src="assets/3-video/play.png" alt="play_video.png">
             </a>
         </div>
-    </section><!-- ./section__team -->
+    </section><!-- ./section__video -->
 
 
     <section class="section section__services">
@@ -369,38 +408,38 @@
                     </div>
                     <h3>Nemo enim ipsam voluptatem quia voluptas</h3>
                 </div>
-                <img src='assets/7-impact/car.png' alt='car.png'>
+                <img src="assets/7-impact/car.png" alt="car.png">
             </div>
 
             <div class="repairs">
 
                 <div class="repairs__item">
-                    <img src='assets/7-impact/1-oil.png' alt='1-oil.png' width='76' height='76'>
-                    <div class='block'>
+                    <img src="assets/7-impact/1-oil.png" alt="1-oil.png" width="76" height="76">
+                    <div class="block">
                         <h3>16k+</h3>
                         <p>Oil changes</p>
                     </div>
                 </div>
 
                 <div class="repairs__item">
-                    <img src='assets/7-impact/2-transmission.png' alt='2-transmission.png' width='76' height='76'>
-                    <div class='block'>
+                    <img src="assets/7-impact/2-transmission.png" alt="2-transmission.png" width="76" height="76">
+                    <div class="block">
                         <h3>13k+</h3>
                         <p>Transmission repairs</p>
                     </div>
                 </div>
 
                 <div class="repairs__item">
-                    <img src='assets/7-impact/3-alignments.png' alt='3-alignments.png' width='76' height='76'>
-                    <div class='block'>
+                    <img src="assets/7-impact/3-alignments.png" alt="3-alignments.png" width="76" height="76">
+                    <div class="block">
                         <h3>14k+</h3>
                         <p>Alignments made</p>
                     </div>
                 </div>
 
                 <div class="repairs__item">
-                    <img src='assets/7-impact/4-engine.png' alt='4-engine.png' width='76' height='76'>
-                    <div class='block'>
+                    <img src="assets/7-impact/4-engine.png" alt="4-engine.png" width="76" height="76">
+                    <div class="block">
                         <h3>11,500+</h3>
                         <p>Engines repaired</p>
                     </div>
@@ -408,7 +447,7 @@
 
             </div>
 
-            <div class='onBorder'>
+            <div class="onBorder">
                 <h5>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h5>
                 <a href="#">
                     <div class="button">
@@ -424,6 +463,133 @@
     </section><!-- ./section__impact -->
 
 
+    <section class="section footer">
+        <div class="container container__footer">
+
+            <div class="info">
+                <div class="logo">
+                    <img src="assets/1-intro/logo.svg" alt="logo.svg" width="40" height="40">
+                    <h2>logoipsum</h2>
+                </div>
+                <span>
+                    This is a blurb about the company sed do eiusmod tempor incididunt ut labore et dolore ex magna aliqua.
+                </span>
+
+                <div class="social">
+
+                    <a target="_blank" href="#">
+                        <svg class="social__icons facebook">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+
+                    <a target="_blank" href="#">
+                        <svg class="social__icons twitter">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+
+                    <a target="_blank" href="#">
+                        <svg class="social__icons instagram">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+
+                    <a target="_blank" href="#">
+                        <svg class="social__icons youtube">
+                            <use xlink:href="#youtube"></use>
+                        </svg>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="links">
+                <p>EXPLORE LINKS</p>
+                <div class="links__bar">
+                    <div class="links__item">
+                        <a target="_blank" href="#">About</a>
+                    </div>
+                    <div class="links__item">
+                        <a target="_blank" href="#">Reviews</a>
+                    </div>
+                    <div class="links__item">
+                        <a target="_blank" href="#">Services</a>
+                    </div>
+                    <div class="links__item">
+                        <a target="_blank" href="#">Shop</a>
+                    </div>
+                    <div class="links__item">
+                        <a target="_blank" href="#">Specials</a>
+                    </div>
+                    <div class="links__item">
+                        <a target="_blank" href="#">Careers</a>
+                    </div>
+                    <div class="links__item">
+                        <a target="_blank" href="#">Estimates</a>
+                    </div>
+                    <div class="links__item">
+                        <a target="_blank" href="#">FAQs</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact">
+                <p>CONTACT</p>
+                <div class="contact__bar">
+                   
+                    <a target="_blank" href="https://www.google.com/maps/place/AA+Auto+Service+Center/@47.6799345,-122.1668227,12.08z/data=!4m8!1m2!2m1!1scar+service+station!3m4!1s0x0:0x7c66f0c7e3c76655!8m2!3d47.6751263!4d-122.1077156">
+                        <div class="contact__item">
+                            <svg class="contact__icons">
+                                <use xlink:href="#address"></use>
+                            </svg>
+                            <span class="contact__text">321 Pikes Place Parkway Seattle, WA 54321</span>
+                        </div>
+                    </a>
+
+                    <a target="_blank" href="tel:+15557654321">
+                        <div class="contact__item">
+                            <svg class="contact__icons">
+                                <use xlink:href="#phone"></use>
+                            </svg>
+                            <span class="contact__text">(555) 765-4321</span>
+                        </div>
+                    </a>
+
+                    <a target="_blank" href="mailto:reagent03@gmail.com">
+                        <div class="contact__item">
+                            <svg class="contact__icons">
+                                <use xlink:href="#mail"></use>
+                            </svg>
+                            <span class="contact__text">Info@company.com</span>
+                        </div>
+                    </a>
+
+                    <div class="contact__item__clock">
+                        <svg class="contact__icons">
+                            <use xlink:href="#clock"></use>
+                        </svg>
+                        Mon - Sat: 7:00 am - 6:00 pm
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div><!-- ./container -->
+
+        <div class="policy">
+            <div class="container container__footer_down">
+                <span>Tagline lorem ipsum dolor sit amet, consectetur adipiscing eiusmod</span>
+                <span>© 2018 Company.
+                <a href="#">Privacy Policy | Terms & Conditions</a></span>
+            </div>
+        </div>
+
+    </section><!-- ./footer -->
+
+
     <script src="app.js"></script>
 
 </body>
@@ -431,5 +597,7 @@
 </html>
 
 
+<!-- Сделать адаптив -->
+<!-- Подключить javascript -->
 <!-- Сделать однотипными кавычки -->
 <!-- Проверить на валидаторе -->

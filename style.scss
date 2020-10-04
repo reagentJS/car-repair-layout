@@ -73,9 +73,13 @@ body {
     justify-content: space-between;
     align-items: start;
     color: #fff;
+    
+    h2 {
+        color: #fff;
+    }
 }
 
-.header__logo {
+.logo {
     display: flex;
     align-items: center;
 
@@ -724,3 +728,146 @@ body {
     }
 }
 /* ----------------- ./impact ------------------- */
+
+
+/* ------------------- footer ------------------- */
+.footer {
+    height: 530px;
+    background-color: $section;
+}
+
+.container__footer {
+    padding-top: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    max-width: 235px;
+    display: flex;
+    flex-direction: column;
+
+    .logo {
+        margin-bottom: 23px;
+    }
+
+    span {
+        margin-bottom: 33px;
+    }
+}
+
+.social {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social__icons {
+    fill: $red_dark;
+    transition: .4s;
+
+    &.facebook {
+        width: 10px;
+        height: 20px;
+    }
+
+    &.twitter {
+        width: 22px;
+        height: 17px;
+    }
+
+    &.instagram {
+        width: 18px;
+        height: 18px;
+    }
+
+    &.youtube {
+        width: 20px;
+        height: 14px;
+    }
+
+    &:hover {
+        fill: $secondary;
+    }
+}
+
+.links,
+.contact {
+    max-width: 280px;
+    color: $neu_grey1;
+
+    p {
+        margin-bottom: 28px;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+.links__bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+}
+
+.links__item {
+    width: calc((100% - 11px) / 2);
+}
+
+.contact__bar {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        margin-bottom: 18px;
+    }
+
+    svg {
+        margin-right: 18px;
+    }
+}
+
+.contact__item {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+
+        .contact__text {
+            text-decoration: underline;
+        }
+
+        .contact__icons {
+            fill: $secondary;
+        }
+    }
+}
+
+.contact__item__clock {
+    display: flex;
+    align-items: center;
+}
+
+.contact__icons {
+    width: 16px;
+    height: 16px;
+    fill: $red_dark;
+}
+
+.container__footer_down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 12px;
+    color: $neu_grey2;
+
+    a {
+        font-weight: 700;
+    }
+}
+
+.policy {
+    height: 60px;
+    background-color: $secondary;
+}
+/* ----------------- ./footer ------------------- */
