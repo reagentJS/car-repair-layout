@@ -14,25 +14,31 @@ h1, h2, h3, h4, h5, h6 {
   color: #02133C;
 }
 
+h1 {
+  font-size: 56px;
+  line-height: 1;
+  color: #fff;
+}
+
 h3 {
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.17;
 }
 
 h4 {
   font-size: 30px;
-  line-height: 36px;
+  line-height: 1.2;
 }
 
 h5 {
   font-size: 24px;
-  line-height: 30px;
+  line-height: 1.25;
 }
 
 h6 {
   margin-bottom: 20px;
   font-size: 19px;
-  line-height: 26px;
+  line-height: 1.37;
 }
 
 body {
@@ -41,12 +47,14 @@ body {
 }
 
 .section {
-  width: 1440px;
+  width: 100%;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .container {
-  width: 1100px;
+  width: 100%;
+  max-width: 1100px;
   height: 100%;
   margin: 0 auto;
   padding: 0 40px;
@@ -56,7 +64,9 @@ body {
 .section__intro {
   padding-top: 28px;
   min-height: 800px;
-  background: url(../assets/1-intro/back.png) no-repeat;
+  background: url(../assets/1-intro/back.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header {
@@ -71,6 +81,7 @@ body {
 }
 
 .logo {
+  margin-right: 30px;
   display: flex;
   align-items: center;
 }
@@ -79,8 +90,9 @@ body {
 }
 
 .header__contacts {
-  width: 610px;
-  height: 40px;
+  width: 80%;
+  max-width: 580px;
+  min-height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,7 +111,9 @@ body {
 
 .button {
   display: inline-flex;
+  overflow: hidden;
   font-size: 12px;
+  text-align: center;
   text-transform: uppercase;
   color: #fff;
 }
@@ -123,7 +137,7 @@ body {
   content: "";
   position: absolute;
   left: -14px;
-  width: 20px;
+  width: 14px;
   height: 100%;
   transform-origin: bottom left;
   transform: skewX(-20deg);
@@ -142,7 +156,9 @@ body {
 }
 
 .nav__navbar {
-  width: 556px;
+  width: 100%;
+  max-width: 556px;
+  margin-right: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -152,8 +168,13 @@ body {
   font-weight: 700;
   color: #02133C;
 }
-.nav__navbar > a img {
-  transform: translateY(-25%);
+
+.navbar__item {
+  display: flex;
+  align-items: center;
+}
+.navbar__item .text {
+  margin-right: 10px;
 }
 
 .nav__icons {
@@ -184,20 +205,27 @@ body {
   background-color: #C40B0B;
 }
 
+.intro__icons {
+  width: 24px;
+  height: 24px;
+}
+
+.intro__icons__search {
+  margin-right: 25px;
+}
+
 .title {
-  width: 583px;
+  width: 100%;
+  max-width: 583px;
   margin-bottom: 48px;
   display: flex;
-}
-.title h1 {
-  font-size: 56px;
-  color: #fff;
-  line-height: 56px;
 }
 
 /* ----------------- ./intro ------------------- */
 /* ------------------- team ------------------- */
 .section__team {
+  padding-bottom: 40px;
+  height: auto;
   min-height: 1280px;
   background-color: #F5F5F5;
 }
@@ -221,7 +249,8 @@ body {
   flex-direction: column;
 }
 .who__content h3 {
-  width: 583px;
+  width: 100%;
+  max-width: 583px;
   margin-bottom: 36px;
 }
 
@@ -241,7 +270,7 @@ body {
 
 .subtitle {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.15px;
   color: #4B4B4B;
 }
@@ -251,6 +280,7 @@ body {
   top: 320px;
   left: 50%;
   transform: translateX(-50%);
+  width: 75%;
 }
 
 .promise__content {
@@ -264,6 +294,7 @@ body {
 .promise__bar {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -278,7 +309,7 @@ body {
 .card__item span,
 .services__item span {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   letter-spacing: 0.15px;
   color: #4B4B4B;
 }
@@ -287,17 +318,20 @@ body {
 /* ------------------- video ------------------- */
 .section__video {
   position: relative;
+  width: 100%;
   min-height: 500px;
-  background: url(../assets/3-video/back.png) no-repeat;
+  background: url(../assets/3-video/back.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .section__video div {
-  width: 411px;
   position: absolute;
   left: 50%;
   transform: translateY(50%);
 }
 .section__video h3 {
-  width: 411px;
+  width: 100%;
+  max-width: 411px;
   color: #fff;
 }
 
@@ -315,17 +349,17 @@ body {
 }
 
 .services__bar {
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 18px;
 }
 
 .services__item {
   width: 324px;
-  height: 340px;
-  margin-bottom: 66px;
-  padding: 0 43px;
+  height: 300px;
+  padding: 0 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -346,7 +380,6 @@ body {
 .container__button {
   display: flex;
   justify-content: center;
-  overflow: hidden;
 }
 
 /* ----------------- ./services ------------------- */
@@ -370,9 +403,11 @@ body {
 }
 
 .form {
-  width: 585px;
-  height: 640px;
-  padding: 76px 0;
+  width: 100%;
+  max-width: 585px;
+  min-width: 320px;
+  min-height: 640px;
+  padding: 76px 57px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -382,13 +417,15 @@ body {
 .form h3 {
   margin-bottom: 13px;
 }
+.form .appointment__button {
+  align-self: flex-end;
+}
 .form .container__button {
   width: 470px;
   justify-content: flex-end;
 }
 
 .fields {
-  padding: 0 57px;
   display: flex;
   flex-wrap: wrap;
   gap: 23px;
@@ -440,7 +477,7 @@ body {
 }
 .counter span {
   font-size: 96px;
-  line-height: 56px;
+  line-height: 0.58;
   font-weight: 900;
   color: #C40B0B;
 }
@@ -463,7 +500,6 @@ body {
   margin-bottom: 240px;
   padding: 100px 87px 0 87px;
   height: 700px;
-  overflow: visible;
   background-color: #fff;
 }
 .gallery h3 {
@@ -483,7 +519,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: 500;
   letter-spacing: 0.15px;
   color: #02133C;
@@ -528,6 +564,10 @@ body {
 
 .gallery__image {
   position: relative;
+}
+.gallery__image img {
+  width: 100%;
+  height: auto;
 }
 
 .gallery__image__live {
@@ -583,9 +623,9 @@ body {
 /* ------------------- impact ------------------- */
 .section__impact {
   min-height: 580px;
-  overflow: visible;
   background: url(../assets/7-impact/back.png);
   background-repeat: no-repeat;
+  background-position: center;
   background-color: #02133C;
 }
 .section__impact .suptitle {
@@ -600,8 +640,13 @@ body {
   align-items: flex-end;
 }
 .impact__inner h3 {
-  width: 411px;
+  width: 100%;
+  max-width: 411px;
   color: #fff;
+}
+.impact__inner .car {
+  width: 50%;
+  height: auto;
 }
 
 .repairs {
@@ -770,3 +815,118 @@ body {
 }
 
 /* ----------------- ./footer ------------------- */
+/* ------------------- 825px ------------------- */
+@media (max-width: 825px) {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 20px;
+  }
+
+  h6 {
+    margin-bottom: 14px;
+    font-size: 15px;
+  }
+
+  /* -- intro -- */
+  .header {
+    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 20px;
+  }
+
+  .header__contacts {
+    width: 100%;
+  }
+}
+/* ----------------- ./825px ------------------- */
+/* ------------------- 755px ------------------- */
+@media (max-width: 755px) {
+  /* -- intro -- */
+  .nav {
+    width: auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    background: transparent;
+  }
+
+  .nav__navbar {
+    margin-right: 0;
+    width: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .navbar__item {
+    width: 120px;
+    height: 30px;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: #fff;
+    transition: 0.2s;
+  }
+  .navbar__item:hover {
+    color: #C40B0B;
+    background-color: #959595;
+  }
+
+  .nav__icons {
+    gap: 16px;
+  }
+
+  .icons__search {
+    margin-right: 0;
+  }
+
+  .icons__search__div,
+.icons__basket {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: 0.2s;
+  }
+  .icons__search__div:hover,
+.icons__basket:hover {
+    fill: #C40B0B;
+    background-color: #959595;
+  }
+
+  .intro__icons__search {
+    margin-right: 0;
+  }
+}
+/* ----------------- ./755px ------------------- */
+/* ------------------- 630px ------------------- */
+@media (max-width: 630px) {
+  /* -- intro -- */
+  .header__contacts {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+/* ----------------- ./630px ------------------- */
