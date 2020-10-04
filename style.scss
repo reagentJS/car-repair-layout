@@ -17,11 +17,16 @@ a {
 }
 
 h3 {
-    width: 583px;
     font-size: 36px;
     line-height: 42px;
     font-weight: 900;
     color: $secondary;
+}
+
+h4 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 36px;
 }
 
 h6 {
@@ -174,7 +179,7 @@ body {
         right: 0;
         top: 0;
         transform: translate(50%, -30%);
-        
+
         width: 16px;
         height: 16px;
 
@@ -201,6 +206,7 @@ body {
         line-height: 56px;
     }
 }
+
 /* ----------------- ./intro ------------------- */
 
 
@@ -298,6 +304,7 @@ body {
         color: $neu_grey1;
     }
 }
+
 /* ----------------- ./team ------------------- */
 
 
@@ -319,13 +326,17 @@ body {
         color: #fff;
     }
 }
+
 /* ----------------- ./video ------------------- */
 
 
 /* ------------------- services ------------------- */
 .section__services {
     padding: 110px 0;
-    background: url(../assets/4-services/back_gears.png) no-repeat $section;
+    background-color: $section;
+    background: url(../assets/4-services/back_gears1.png), url(../assets/4-services/back_gears2.png);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
 
     h3 {
         margin-bottom: 78px;
@@ -358,14 +369,129 @@ body {
     }
 
     &:hover {
-        box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.75);
-        -webkit-box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 6px 16px 0px rgba(0, 0, 0, 0.75);
     }
 }
 
 .container__button {
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
+
 /* ----------------- ./services ------------------- */
+
+
+/* ------------------- appointment ------------------- */
+.section__appointment {
+    min-height: 980px;
+    background-color: $secondary;
+    background-image: url(../assets/5-appointment/back_gears1.png), url(../assets/5-appointment/back_gears2.png);
+    background-position: right top, left bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.container__appointment {
+    padding-top: 130px;
+}
+
+.appointment__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form {
+    width: 585px;
+    height: 640px;
+    padding: 76px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+
+    h3 {
+        margin-bottom: 13px;
+    }
+
+    .container__button {
+        width: 470px;
+        justify-content: flex-end;
+    }
+}
+
+.fields {
+    padding: 0 57px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 23px;
+
+    input,
+    select {
+        width: calc((100% - 23px) / 2);
+        height: 48px;
+        padding: 0 23px;
+
+        border: 0;
+        background-color: $section;
+
+        font-size: 16px;
+    }
+
+    select {
+        padding: 0 20px;
+    }
+
+    textarea {
+        padding: 23px;
+        width: 100%;
+        height: 180px;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+    }
+}
+
+::-webkit-input-placeholder {
+    color: $neu_grey2;
+}
+
+:-ms-input-placeholder {
+    color: $neu_grey2;
+}
+
+::-moz-placeholder {
+    color: $neu_grey2;
+    opacity: 1;
+}
+
+.counter {
+    width: 324px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    h4, h6 {
+        color: #fff;
+    }
+
+    span {
+        font-size: 96px;
+        line-height: 56px;
+        font-weight: 900;
+
+        color: $btn_dark;
+    }
+
+    h6 {
+        margin-bottom: 20px;
+    }
+}
+/* ----------------- ./appointment ------------------- */
