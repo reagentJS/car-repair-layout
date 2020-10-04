@@ -202,7 +202,7 @@ body {
 .who {
   transform: translateY(-80px);
   height: 700px;
-  margin: -80px 0 170px 0;
+  margin: 0 0 170px 0;
   padding: 100px 87px;
   display: flex;
   background: url(../assets/2-team/back_gears.png) no-repeat #fff;
@@ -442,3 +442,134 @@ body {
 }
 
 /* ----------------- ./appointment ------------------- */
+/* ------------------- gallery ------------------- */
+.section__gallery {
+  min-height: 1410px;
+  background: url(../assets/6-gallery/back_gears.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-color: #F5F5F5;
+}
+
+.gallery {
+  transform: translateY(-80px);
+  margin-bottom: 240px;
+  padding: 100px 87px 0 87px;
+  height: 700px;
+  overflow: visible;
+  background-color: #fff;
+}
+.gallery h3 {
+  margin-bottom: 55px;
+}
+
+.gallery__bar {
+  width: 846px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery__item {
+  width: 29.46%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  color: #02133C;
+  border-bottom: 1px solid #D5D5D5;
+  transition: 0.2s;
+}
+.gallery__item:first-child {
+  width: 11.6%;
+}
+.gallery__item:hover {
+  border-bottom: 4px solid #C40B0B;
+}
+
+.gallery__item__active {
+  border-bottom: 4px solid #C40B0B;
+  color: #C40B0B;
+}
+
+.blink {
+  position: relative;
+}
+
+.blink:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(150%, -50%);
+  display: flex;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #21C613;
+}
+.blink:after .disabled {
+  background-color: grey;
+}
+
+.disabled:after {
+  background-color: grey;
+}
+
+.gallery__image {
+  position: relative;
+}
+
+.gallery__image__live {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-64%, 100%);
+  width: 50px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #21C613;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.customers {
+  display: flex;
+  gap: 24px;
+}
+
+.customers__title,
+.customers__item {
+  width: 31.76%;
+  display: flex;
+  flex-direction: column;
+}
+
+.customers__item {
+  padding: 45px;
+  background-color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.15px;
+}
+.customers__item span {
+  margin-bottom: 36px;
+  color: #4B4B4B;
+}
+.customers__item .name {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  line-height: 24px;
+  color: #02133C;
+}
+.customers__item .name img {
+  margin-right: 17px;
+}
+
+/* ----------------- ./gallery ------------------- */
