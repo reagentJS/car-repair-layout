@@ -599,11 +599,7 @@ body {
 
     border-bottom: 1px solid #D5D5D5;
     transition: .2s;
-
-    // &:first-child {
-    //     width: 11.6%;
-    // }
-
+    
     &:hover {
         border-bottom: 4px solid $red_dark;
     }
@@ -721,8 +717,12 @@ body {
     }
 }
 
+.container__impact {
+    padding-top: 90px;
+}
+
 .impact__inner {
-    transform: translateY(-25%);
+    max-height: 143.2px;
     margin-bottom: 85px;
 
     display: flex;
@@ -743,11 +743,13 @@ body {
 
 .repairs {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 
 .repairs__item {
-    width: 23.23%;
+    width: 198px;
     display: flex;
 
     img {
@@ -770,9 +772,9 @@ body {
 }
 
 .onBorder {
-    transform: translateY(50%);
+    transform: translateY(72%);
 
-    padding: 0 70px;
+    padding: 0 6.86%;
     width: 100%;
     height: 150px;
 
@@ -947,6 +949,15 @@ body {
 
     .gallery__item {
         width: 46%;
+    }
+
+    /* -- impact -- */
+    .repairs__item {
+        width: 44%;
+    }
+
+    .onBorder {
+        transform: translateY(50%);
     }
 }
 /* ----------------- ./960px ------------------- */
@@ -1151,7 +1162,7 @@ body {
     }
     
     h5 {
-        font-size: 28px;
+        font-size: 18px;
     }
     
     h6 {
@@ -1190,6 +1201,28 @@ body {
 
     .gallery__item {
         width: 96%;
+    }
+
+    /* -- impact -- */
+    .impact__inner {
+        height: 100%;
+        max-height: none;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .car {
+            width: 90%;
+        }
+    }
+
+    .repairs__item {
+        width: 60%;
+        margin-bottom: 20px;
     }
 }
 /* ----------------- ./630px ------------------- */
@@ -1233,6 +1266,17 @@ body {
     /* -- gallery -- */
     .customers__item {
         width: 100%;
+    }
+
+    /* -- impact -- */
+    .onBorder {
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        h5 {
+            margin-right: 0;
+            text-align: center;
+        }
     }
 }
 /* ----------------- ./497px ------------------- */
