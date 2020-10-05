@@ -322,19 +322,25 @@ body {
 /* ----------------- ./team ------------------- */
 /* ------------------- video ------------------- */
 .section__video {
-  position: relative;
-  width: 100%;
   min-height: 500px;
+  display: flex;
+  justify-content: center;
   background: url(../assets/3-video/back.png);
   background-repeat: no-repeat;
   background-position: center;
+  background-color: #02133C;
 }
-.section__video div {
-  position: absolute;
-  left: 50%;
-  transform: translateY(50%);
+
+.video__section {
+  width: 50%;
 }
-.section__video h3 {
+
+.video__section:last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.video__section:last-child h3 {
   width: 100%;
   max-width: 411px;
   color: #fff;
@@ -390,7 +396,6 @@ body {
 /* ----------------- ./services ------------------- */
 /* ------------------- appointment ------------------- */
 .section__appointment {
-  min-height: 980px;
   background-color: #02133C;
   background-image: url(../assets/5-appointment/back_gears1.png), url(../assets/5-appointment/back_gears2.png);
   background-position: right top, left bottom;
@@ -398,7 +403,8 @@ body {
 }
 
 .container__appointment {
-  padding-top: 130px;
+  padding-top: 9%;
+  padding-bottom: 14.5%;
 }
 
 .appointment__inner {
@@ -558,9 +564,6 @@ body {
   height: 6px;
   border-radius: 50%;
   background-color: #21C613;
-}
-.blink:after .disabled {
-  background-color: grey;
 }
 
 .disabled:after {
@@ -861,6 +864,12 @@ body {
   .header__contacts {
     width: 100%;
   }
+
+  /* -- appointment -- */
+  .counter span {
+    font-size: 72px;
+    font-weight: 900;
+  }
 }
 /* ----------------- ./825px ------------------- */
 /* ------------------- 755px ------------------- */
@@ -922,6 +931,28 @@ body {
 
   .intro__icons__search {
     margin-right: 0;
+  }
+
+  /* -- video -- */
+  .video__section:first-child {
+    width: 0%;
+  }
+
+  .video__section:last-child {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* -- appointment -- */
+  .appointment__inner {
+    flex-direction: column-reverse;
+  }
+
+  .counter {
+    height: 200px;
+  }
+  .counter span {
+    font-weight: 700;
   }
 }
 /* ----------------- ./755px ------------------- */
