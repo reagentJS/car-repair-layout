@@ -72,8 +72,9 @@ body {
 .section__intro {
     padding-top: 28px;
     min-height: 800px;
-    background: url(../assets/1-intro/back.png);background-repeat: no-repeat;
-    background-position: center;
+    background: url(../assets/1-intro/back.png);background-repeat: repeat-y;
+    background-position: top;
+    background-color: $secondary;
 }
 
 .header {
@@ -245,21 +246,31 @@ body {
 
 /* ------------------- team ------------------- */
 .section__team {
-    padding-bottom: 40px;
-    height: auto;
+    padding-bottom: 100px;
+    height: 100%;
     min-height: 1280px;
     background-color: $section;
 }
 
 .container__team {
     position: relative;
+    height: auto;
+}
+
+.engine {
+    position: absolute;
+    top: 320px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 77%;
 }
 
 .who {
     transform: translateY(-80px);
-    height: 700px;
-    margin: 0 0 170px 0;
-    padding: 100px 87px;
+    height: 100%;
+    min-height: 720px;
+    margin-bottom: 15%;
+    padding: 10% 8.5%;
 
     display: flex;
     background: url(../assets/2-team/back_gears.png) no-repeat #fff;
@@ -294,18 +305,12 @@ body {
 }
 
 .subtitle {
+    margin-bottom: 30px;
+
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.15px;
     color: $neu_grey1;
-}
-
-.engine {
-    position: absolute;
-    top: 320px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 75%;
 }
 
 .promise__content {
@@ -325,7 +330,8 @@ body {
 }
 
 .promise__card {
-    width: 324px;
+    width: 100%;
+    max-width: 324px;
     display: flex;
 
     img {
@@ -959,7 +965,6 @@ body {
     .header__contacts {
         width: 100%;
     }
-
 }
 /* ----------------- ./825px ------------------- */
 
@@ -1035,11 +1040,114 @@ body {
 /* ------------------- 630px ------------------- */
 @media (max-width: 630px) {
 
+    h1 {
+        font-size: 30px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    h4 {
+        font-size: 20px;
+    }
+    
+    h5 {
+        font-size: 28px;
+    }
+    
+    h6 {
+        margin-bottom: 10px;
+    }
+
     /* -- intro -- */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .header__contacts {
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
     }
+
+    .nav {
+        margin-bottom: 30px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
 }
 /* ----------------- ./630px ------------------- */
+
+/* ------------------- 520px ------------------- */
+@media (max-width: 520px) {
+
+    /* -- team -- */
+    .who {
+        min-height: 520px;
+    }
+
+    .engine {
+        top: 360px;
+        width: 70%;
+    }
+
+    .promise__content {
+        h3 {
+            margin-bottom: 48px;
+            text-align: center;
+        }
+    }
+
+    .promise__card {
+        margin-bottom: 30px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        img {
+            margin: 0 0 20px 0;
+        }
+    }
+}
+/* ----------------- ./520px ------------------- */
+
+/* ------------------- 440px ------------------- */
+@media (max-width: 440px) {
+
+    /* -- intro -- */
+    .section__intro {
+        padding-bottom: 120px;
+    }
+
+    /* -- team -- */
+    .who {
+        min-height: 535px;
+    }
+
+    .engine {
+        top: 390px;
+        width: 68%;
+    }
+}
+/* ----------------- ./440px ------------------- */
+
+/* ------------------- 375px ------------------- */
+@media (max-width: 375px) {
+
+    /* -- team -- */
+    .who {
+        min-height: 670px;
+    }
+
+    .engine {
+        top: 540px;
+        width: 64%;
+    }
+}
+/* ----------------- ./375px ------------------- */
