@@ -3,13 +3,24 @@
 var links = document.querySelectorAll('.navbar__item');
 var contNav = document.querySelector('.container__nav');
 var intervals = [];
+var body = document.getElementsByTagName('body')[0];
+var windowWidth = window.innerWidth || document.documentElement.clientWidth || body.clientWidth;
+window.addEventListener("resize", getWindowSize);
+
+function getWindowSize() {
+  windowWidth = window.innerWidth || document.documentElement.clientWidth || body.clientWidth;
+}
+
 document.addEventListener('scroll', function () {
-  if (window.scrollY > 96) {
+  if (window.scrollY > 96 && windowWidth >= 755) {
     contNav.style.position = 'sticky';
     contNav.style.top = '0';
+  } else if (window.scrollY <= 96 && contNav.style.position === 'sticky') {
+    contNav.style.position = 'relative';
+    contNav.style.top = '90px';
   }
 
-  if (window.scrollY <= 96) {
+  if (windowWidth < 755 && contNav.style.position === 'sticky') {
     contNav.style.position = 'relative';
     contNav.style.top = '90px';
   }

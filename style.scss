@@ -57,7 +57,6 @@ html {
 
 body {
     margin: 0 auto;
-    // height: 100%;
 }
 
 .section {
@@ -76,8 +75,6 @@ body {
 
 /* ------------------- intro ------------------- */
 .section__intro {
-    // margin-top: 0;
-
     padding-top: 28px;
     min-height: 800px;
     background: url(../assets/1-intro/back.png);background-repeat: repeat-y;
@@ -187,12 +184,7 @@ body {
 }
 
 .nav {
-    // position: sticky;
-    // top: 90px;
-    // z-index: 1000;
-    
     width: 100%;
-    // max-width: 1020px;
     min-height: 60px;
     padding: 0 40px;
 
@@ -201,16 +193,6 @@ body {
     align-items: center;
     background-color: #fff;
 }
-
-// .nav {
-//     min-height: 60px;
-//     margin-bottom: 126px;
-//     padding: 0 40px;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     background-color: #fff;
-// }
 
 .nav__navbar {
     width: 100%;
@@ -1064,7 +1046,8 @@ body {
     }
 
     .logo {
-        margin-bottom: 20px;
+        margin-right: 0;
+        margin-bottom: 100px;
     }
 
     .header__contacts {
@@ -1168,6 +1151,10 @@ body {
             color: $red_dark;
             background-color: $neu_grey2;
         }
+    }
+
+    .logo {
+        margin-bottom: 180px;
     }
 
     .nav__icons {
@@ -1276,6 +1263,10 @@ body {
         align-items: center;
     }
 
+    .container__nav {
+        display: block;
+    }
+
     .header__contacts {
         flex-wrap: wrap;
         justify-content: center;
@@ -1331,10 +1322,6 @@ body {
         text-align: center;
     }
 
-    .logo {
-        margin-right: 0;
-    }
-
     .links,
     .contact {
         p {
@@ -1343,6 +1330,16 @@ body {
     }
 }
 /* ----------------- ./630px ------------------- */
+
+/* ------------------- 528px ------------------- */
+@media (max-width: 528px) {
+
+    /* -- intro -- */
+    .logo {
+        margin-bottom: 260px;
+    }
+}
+/* ----------------- ./528px ------------------- */
 
 /* ------------------- 520px ------------------- */
 @media (max-width: 520px) {
@@ -1429,6 +1426,24 @@ body {
     }
 }
 /* ----------------- ./440px ------------------- */
+
+/* ------------------- 392px ------------------- */
+@media (max-width: 392px) {
+
+    /* -- intro -- */
+    .nav {
+        padding: 0;
+    }
+
+    .nav__navbar {
+        gap: 20px;
+    }
+
+    .navbar__item {
+        width: 100px;
+    }
+}
+/* ----------------- ./392px ------------------- */
 
 /* ------------------- 375px ------------------- */
 @media (max-width: 375px) {

@@ -934,7 +934,8 @@ body {
   }
 
   .logo {
-    margin-bottom: 20px;
+    margin-right: 0;
+    margin-bottom: 100px;
   }
 
   .header__contacts {
@@ -1027,6 +1028,10 @@ body {
   .navbar__item:hover {
     color: #C40B0B;
     background-color: #959595;
+  }
+
+  .logo {
+    margin-bottom: 180px;
   }
 
   .nav__icons {
@@ -1131,6 +1136,10 @@ body {
     align-items: center;
   }
 
+  .container__nav {
+    display: block;
+  }
+
   .header__contacts {
     flex-wrap: wrap;
     justify-content: center;
@@ -1184,16 +1193,20 @@ body {
     text-align: center;
   }
 
-  .logo {
-    margin-right: 0;
-  }
-
   .links p,
 .contact p {
     margin-bottom: 14px;
   }
 }
 /* ----------------- ./630px ------------------- */
+/* ------------------- 528px ------------------- */
+@media (max-width: 528px) {
+  /* -- intro -- */
+  .logo {
+    margin-bottom: 260px;
+  }
+}
+/* ----------------- ./528px ------------------- */
 /* ------------------- 520px ------------------- */
 @media (max-width: 520px) {
   /* -- team -- */
@@ -1268,6 +1281,22 @@ body {
   }
 }
 /* ----------------- ./440px ------------------- */
+/* ------------------- 392px ------------------- */
+@media (max-width: 392px) {
+  /* -- intro -- */
+  .nav {
+    padding: 0;
+  }
+
+  .nav__navbar {
+    gap: 20px;
+  }
+
+  .navbar__item {
+    width: 100px;
+  }
+}
+/* ----------------- ./392px ------------------- */
 /* ------------------- 375px ------------------- */
 @media (max-width: 375px) {
   /* -- team -- */
